@@ -103,20 +103,6 @@ The panel must remain open; there is no background service installed automatical
 - The firmware emits `CARD:<UID>` at 115200 baud. Serial Monitor must be closed
   while the panel is connected. There is a four-second typing cooldown.
 
-## Verification
-
-Validated during development: firmware compiled for `esp8266:esp8266:nodemcuv2`
-with ESP8266 core 3.1.2 and MFRC522 1.4.12; four Python unit tests and syntax
-compilation passed. Hardware scans and GUI operation remain untested: no NodeMCU
-USB serial device was detected, and the host Python could not load `libtk8.6.so`.
-Install a matching Tk runtime before launching the GUI.
-
-
-```bash
-python3 -m unittest discover -s tests -v
-python3 -m py_compile control_panel.py
-```
-
 Upstream references: [MFRC522 library](https://github.com/miguelbalboa/rfid),
 [ESP8266 Arduino core](https://github.com/esp8266/Arduino), and
 [ydotool](https://github.com/ReimuNotMoe/ydotool).
