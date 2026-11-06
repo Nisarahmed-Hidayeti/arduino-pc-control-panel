@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="810" viewBox="0 0 1100 810" role="img" aria-labelledby="title desc">
+<title id="title">LOLIN NodeMCU V3 to RC522 wiring diagram</title>
+<desc id="desc">Connect NodeMCU 3V3 to RC522 3.3V, GND to GND, D2 GPIO4 to SDA SS, D1 GPIO5 to RST, D5 GPIO14 to SCK, D6 GPIO12 to MISO, and D7 GPIO13 to MOSI. Leave IRQ disconnected. Connector placement is simplified; match the printed labels on your boards.</desc>
+<rect width="1100" height="810" rx="24" fill="#f3f5f9"/>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="55" y="57" font-size="29" font-weight="bold" fill="#142339">NodeMCU V3 + RC522</text>
+<text x="55" y="88" font-size="16" fill="#526177">Fritzing-style connection view • USB serial to your Linux PC</text>
+<rect x="55" y="111" width="990" height="39" rx="10" fill="#fff0d6"/>
+<text x="75" y="136" font-size="15" fill="#754500">Simplified pin placement — connect by the labels printed on your boards.</text>
+<rect x="70" y="174" width="270" height="480" rx="18" fill="#222f3c" stroke="#0f1926" stroke-width="3"/>
+<rect x="760" y="174" width="270" height="480" rx="18" fill="#146393" stroke="#0d466d" stroke-width="3"/>
+<text x="94" y="209" font-size="20" font-weight="bold" fill="white">LOLIN NodeMCU V3</text>
+<text x="94" y="234" font-size="14" fill="#c1d1df">ESP8266 • USB powered</text>
+<text x="788" y="209" font-size="22" font-weight="bold" fill="white">RFID-RC522</text>
+<text x="788" y="234" font-size="14" fill="#d0e7f6">13.56 MHz • SPI</text>
+
+<path d="M 335 279 H 765" fill="none" stroke="#d43838" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="271" width="22" height="16" rx="3" fill="#d8b56a"/>
+<rect x="760" y="271" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="329" cy="279" r="4" fill="#0e1722"/>
+<circle cx="771" cy="279" r="4" fill="#0e1722"/>
+<text x="304" y="284" text-anchor="end" font-size="17" font-weight="bold" fill="white">3V3</text>
+<text x="795" y="284" font-size="17" font-weight="bold" fill="white">3.3V</text>
+<rect x="422" y="253" width="256" height="21" rx="5" fill="#f3f5f9"/>
+<text x="550" y="269" text-anchor="middle" font-size="13" fill="#d43838">3.3V power</text>
+<path d="M 335 326 H 765" fill="none" stroke="#333b49" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="318" width="22" height="16" rx="3" fill="#d8b56a"/>
+<rect x="760" y="318" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="329" cy="326" r="4" fill="#0e1722"/>
+<circle cx="771" cy="326" r="4" fill="#0e1722"/>
+<text x="304" y="331" text-anchor="end" font-size="17" font-weight="bold" fill="white">GND</text>
+<text x="795" y="331" font-size="17" font-weight="bold" fill="white">GND</text>
+<rect x="422" y="300" width="256" height="21" rx="5" fill="#f3f5f9"/>
+<text x="550" y="316" text-anchor="middle" font-size="13" fill="#333b49">Ground</text>
+<path d="M 335 373 H 765" fill="none" stroke="#8a49b7" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="365" width="22" height="16" rx="3" fill="#d8b56a"/>
+<rect x="760" y="365" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="329" cy="373" r="4" fill="#0e1722"/>
+<circle cx="771" cy="373" r="4" fill="#0e1722"/>
+<text x="304" y="378" text-anchor="end" font-size="17" font-weight="bold" fill="white">D2 / GPIO4</text>
+<text x="795" y="378" font-size="17" font-weight="bold" fill="white">SDA / SS</text>
+<rect x="422" y="347" width="256" height="21" rx="5" fill="#f3f5f9"/>
+<text x="550" y="363" text-anchor="middle" font-size="13" fill="#8a49b7">Chip select</text>
+<path d="M 335 420 H 765" fill="none" stroke="#df7020" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="412" width="22" height="16" rx="3" fill="#d8b56a"/>
+<rect x="760" y="412" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="329" cy="420" r="4" fill="#0e1722"/>
+<circle cx="771" cy="420" r="4" fill="#0e1722"/>
+<text x="304" y="425" text-anchor="end" font-size="17" font-weight="bold" fill="white">D1 / GPIO5</text>
+<text x="795" y="425" font-size="17" font-weight="bold" fill="white">RST</text>
+<rect x="422" y="394" width="256" height="21" rx="5" fill="#f3f5f9"/>
+<text x="550" y="410" text-anchor="middle" font-size="13" fill="#df7020">Reset</text>
+<path d="M 335 467 H 765" fill="none" stroke="#c18b00" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="459" width="22" height="16" rx="3" fill="#d8b56a"/>
+<rect x="760" y="459" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="329" cy="467" r="4" fill="#0e1722"/>
+<circle cx="771" cy="467" r="4" fill="#0e1722"/>
+<text x="304" y="472" text-anchor="end" font-size="17" font-weight="bold" fill="white">D5 / GPIO14</text>
+<text x="795" y="472" font-size="17" font-weight="bold" fill="white">SCK</text>
+<rect x="422" y="441" width="256" height="21" rx="5" fill="#f3f5f9"/>
+<text x="550" y="457" text-anchor="middle" font-size="13" fill="#c18b00">SPI clock</text>
+<path d="M 335 514 H 765" fill="none" stroke="#2575d0" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="506" width="22" height="16" rx="3" fill="#d8b56a"/>
+<rect x="760" y="506" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="329" cy="514" r="4" fill="#0e1722"/>
+<circle cx="771" cy="514" r="4" fill="#0e1722"/>
+<text x="304" y="519" text-anchor="end" font-size="17" font-weight="bold" fill="white">D6 / GPIO12</text>
+<text x="795" y="519" font-size="17" font-weight="bold" fill="white">MISO</text>
+<rect x="422" y="488" width="256" height="21" rx="5" fill="#f3f5f9"/>
+<text x="550" y="504" text-anchor="middle" font-size="13" fill="#2575d0">Reader → NodeMCU</text>
+<path d="M 335 561 H 765" fill="none" stroke="#238b58" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="553" width="22" height="16" rx="3" fill="#d8b56a"/>
+<rect x="760" y="553" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="329" cy="561" r="4" fill="#0e1722"/>
+<circle cx="771" cy="561" r="4" fill="#0e1722"/>
+<text x="304" y="566" text-anchor="end" font-size="17" font-weight="bold" fill="white">D7 / GPIO13</text>
+<text x="795" y="566" font-size="17" font-weight="bold" fill="white">MOSI</text>
+<rect x="422" y="535" width="256" height="21" rx="5" fill="#f3f5f9"/>
+<text x="550" y="551" text-anchor="middle" font-size="13" fill="#238b58">NodeMCU → reader</text>
+<rect x="760" y="611" width="22" height="16" rx="3" fill="#d8b56a"/>
+<circle cx="771" cy="619" r="4" fill="#0e1722"/>
+<text x="795" y="624" font-size="17" font-weight="bold" fill="white">IRQ</text>
+<text x="739" y="624" text-anchor="end" font-size="14" fill="#526177">Leave unconnected</text>
+<rect x="163" y="612" width="72" height="51" rx="6" fill="#b8c3cf" stroke="#718397" stroke-width="2"/>
+<rect x="177" y="630" width="44" height="23" rx="4" fill="#263849"/>
+<path d="M199 663 V685" stroke="#526177" stroke-width="10"/>
+<text x="249" y="682" font-size="14" fill="#526177">USB → Linux PC</text>
+<rect x="55" y="708" width="990" height="65" rx="12" fill="#ffe5e5"/>
+<text x="76" y="735" font-size="18" font-weight="bold" fill="#9a2424">RC522: 3.3V ONLY — never connect its power pin to 5V or VIN.</text>
+<text x="76" y="758" font-size="14" fill="#743838">Disconnect USB before wiring. SDA on this module means SPI chip select, not I²C data.</text>
+</g></svg>

@@ -8,6 +8,11 @@ Changing the approved UID in the panel changes which card works; it does not rew
 
 ## 1. Wiring (disconnect USB while wiring)
 
+![Fritzing-style wiring diagram: LOLIN NodeMCU V3 connected to an RC522 reader](docs/wiring.svg)
+
+The diagram uses simplified pin placement. Match the **printed pin labels** on
+your boards; the connections below match the firmware.
+
 | RC522 label | NodeMCU label | GPIO |
 | --- | --- | --- |
 | 3.3V | 3V3 | — |
