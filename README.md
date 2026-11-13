@@ -24,7 +24,8 @@ your boards; the connections below match the firmware.
 | MOSI | D7 | 13 |
 | IRQ | Leave disconnected | — |
 
-**Use 3.3V, never 5V, for the RC522.** Its SDA label is SPI chip select here.
+**Use 3.3V, never 5V, for the RC522.** Use the NodeMCU pin marked **3V3** and keep **VIN**, **VU**, and **5V** disconnected from the reader. Its SDA label is SPI chip select here.
+See the [NXP MFRC522 datasheet](https://www.nxp.com/docs/en/data-sheet/MFRC522.pdf) for supply and input limits.
 Use a USB data cable, not a charge-only cable.
 
 ## 2. Flash the NodeMCU
@@ -37,7 +38,15 @@ In Arduino IDE:
 3. Install **MFRC522 by GithubCommunity** in Library Manager.
 4. Select **NodeMCU 1.0 (ESP-12E Module)** and the USB serial port.
 5. Open `firmware/rfid_panel/rfid_panel.ino` and upload.
-6. Close Serial Monitor before connecting the control panel.
+6. Open **Serial Monitor** at **115200 baud** and press **RST** once.
+7. The sketch reports the reader version as `RC522_VERSION:0x92` (the value
+   varies by chip), then prints `READY:RFID_PANEL_V1`. Tap a compatible
+   13.56 MHz ISO 14443A card, such as the card supplied with the reader. A successful scan prints a line like `CARD:04A1B2C3`. Lift the
+   card away before tapping again.
+8. If `ERROR:RC522_NOT_FOUND` repeats, disconnect USB, check the wiring
+   above, then reconnect and retry.
+
+Close Serial Monitor before starting the desktop control panel.
 
 Equivalent Arduino CLI commands:
 

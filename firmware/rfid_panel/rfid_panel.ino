@@ -7,13 +7,18 @@ MFRC522 reader(D2, D1); // SS/SDA GPIO4, RST GPIO5
 void setup() {
   Serial.begin(115200);
   SPI.begin(); // SCK D5, MISO D6, MOSI D7
-  reader.PCD_Init();
-  delay(50);
-  byte version = reader.PCD_ReadRegister(MFRC522::VersionReg);
-  if (version == 0x00 || version == 0xFF) {
+  while (true) {
+    reader.PCD_Init();
+    delay(50);
+    const byte version = reader.PCD_ReadRegister(MFRC522::VersionReg);
+    if (version != 0x00 && version != 0xFF) {
+      Serial.printf("RC522_VERSION:0x%02X\n", static_cast<unsigned>(version));
+      Serial.println("READY:RFID_PANEL_V1");
+      return;
+    }
+
     Serial.println("ERROR:RC522_NOT_FOUND");
-  } else {
-    Serial.println("READY:RFID_PANEL_V1");
+    delay(2000);
   }
 }
 
